@@ -1,0 +1,125 @@
+.Header{
+    text-align: center;
+}
+.Header h1{
+    font-size: 40px;
+    color: #333;
+    margin-top: 50px;
+}
+.Header p{
+    font-size: 17px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.Date-log{
+    color: #666;
+    margin-top: 10px;
+    padding-left: 0px;
+}
+
+.Date-log p{
+    font-size: 15px;
+    color: #666;
+    margin-top: 30px;
+}
+
+.Changelog {
+    display: flex;
+    /* justify-content: space-between; Distribute space between Date-log and Activity-log */
+    /* align-items: flex-start; Align them at the top */
+}
+
+.Date-log, .Activity-log {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+    /* width: 45%; /*Adjust the width of each log */
+    padding: 20px;
+}
+
+.Date-log p{
+    padding-left: 10px; /* Space for the date log */
+}
+
+.Activity-log{
+    position: relative; /* Allow positioning for the line and circles */
+    font: 15px Times New Roman;
+}
+
+/* Vertical line */
+/* Ensure uniform spacing and alignment for the <p> tags inside Activity-log */
+
+.Activity-log {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    position: relative;
+    font: 15px Times New Roman;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.Activity-log p {
+    position: relative;
+    margin-top: 30px; /* Add space between each activity log entry */
+    /* margin-left: 0; Remove left margin to ensure equal start for all entries */
+    padding-left: 20px; /* Remove extra padding for consistency */
+}
+
+/* Vertical line */
+.Activity-log::before {
+    content: '';
+    position: absolute;
+    
+    width: 2px; /* Line thickness */
+    height: 100%; /* Make the line span the full height of the Activity-log */
+    background-color: #666;
+    transform: translateX(-50%); /* Center the line */
+}
+
+/* Circles */
+.Activity-log p::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    /* top: -8px; Adjust vertical position */
+    transform: translateX(-50%); /* Ensure the circle is centered horizontally */
+    width: 15px; 
+    height: 15px; /* Size of the circle */
+    background-color: black; /* Circle color */
+    border-radius: 50%; /* Make it a circle */
+}
+
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; Vertically center the footer */
+    /* height: 100vh; Full viewport height */
+}
+
+.clickable-box {
+    background-color: black;
+    color: white;
+    padding: 20px 40px; /* Add space inside the box */
+    border: .5px solid #333; /* Border around the box */
+    cursor: pointer; /* Pointer on hover */
+    text-align: center; /* Center the text inside the clickable box */
+    margin-top: 40px; /* Space from the top */
+    /* width: 150px; Set a fixed width for the box */
+    max-width: 80%; /* Ensure box doesn't overflow */
+    box-sizing: border-box; /* Include padding in width calculation */
+    border-radius: 25px; /* Make the corners rounder */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    /* gap: 10px; Space between the elements inside */
+}
+
+
+
+.Changelog{
+    justify-content: center;
+    align-items: center;
+}
